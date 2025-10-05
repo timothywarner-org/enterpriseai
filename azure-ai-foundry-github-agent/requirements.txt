@@ -1,0 +1,17 @@
+# Core dependencies
+python-dotenv>=1.0.0
+
+# GitHub API
+PyGithub>=2.1.1
+requests>=2.31.0
+
+# Azure AI
+azure-ai-projects>=1.0.0b1
+azure-identity>=1.15.0
+azure-ai-inference>=1.0.0b1
+
+# MCP (Model Context Protocol)
+mcp>=0.9.0
+
+# Optional: For better async support
+aiohttp>=3.9.0

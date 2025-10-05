@@ -1,0 +1,38 @@
+digraph AzureAIDeployment {
+  rankdir=LR;
+  node [shape=box, style=rounded, fontname="Arial"];
+
+  User [label="User / Client"];
+  API [label="API / Application"];
+  APIGateway [label="Azure API Management\n(GenAI Gateway)"];
+  VNet [label="Virtual Network"];
+  OpenAI [label="Azure OpenAI Service"];
+  Search [label="Azure AI Search"];
+  Storage [label="Data Storage (Blob/SQL)"];
+
+  User -> API -> APIGateway;
+  APIGateway -> OpenAI;
+  APIGateway -> Search;
+  OpenAI -> VNet;
+  Search -> VNet;
+  VNet -> Storage;
+
+  subgraph cluster_reg1 {
+    label="Region A";
+    style=dashed;
+    VNet;
+    OpenAI;
+    Search;
+    Storage;
+  }
+
+  subgraph cluster_reg2 {
+    label="Region B (Failover)";
+    style=dashed;
+    OpenAI2 [label="OpenAI (Secondary)"];
+    Search2 [label="AI Search (Secondary)"];
+  }
+
+  APIGateway -> OpenAI2 [style=dashed];
+  APIGateway -> Search2 [style=dashed];
+}
