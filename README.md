@@ -65,6 +65,16 @@ Master the deployment of production-ready AI solutions on Azure with enterprise 
 4. Set up Azure CLI and Git
 5. Access course materials at `github.com/timothywarner`
 
+## 🧪 Classroom MVP App
+
+Looking for a ready-to-teach demo? Check out [`mvp-node-app/`](mvp-node-app/README.md) for a Node.js Retrieval Augmented Generation microservice that:
+
+- Uses Azure OpenAI for chat completions and embeddings
+- Demonstrates private Azure infrastructure with a Bicep template
+- Exposes its functionality as both REST endpoints and an MCP server
+
+It's designed for live delivery—run `npm run prep`, `npm run dev`, and optionally `npm run mcp` to showcase enterprise-ready Azure AI patterns in minutes.
+
 ## 📖 Resources
 
 ### Preparation

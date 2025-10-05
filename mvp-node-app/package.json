@@ -1,0 +1,30 @@
+{
+  "name": "mvp-node-app",
+  "version": "1.0.0",
+  "description": "Live-teachable Azure OpenAI RAG + MCP demo for Enterprise AI course",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "mcp": "node src/mcp-server.js",
+    "prep": "node src/prepare-vector-store.js"
+  },
+  "keywords": [
+    "azure",
+    "openai",
+    "rag",
+    "mcp",
+    "express",
+    "demo"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@azure/openai": "1.0.0-beta.12",
+    "@modelcontextprotocol/sdk": "1.19.1",
+    "dotenv": "16.4.5",
+    "express": "4.19.2",
+    "marked": "13.0.2",
+    "zod": "3.25.76"
+  }
+}
