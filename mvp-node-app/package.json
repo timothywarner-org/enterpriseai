@@ -6,8 +6,10 @@
   "type": "commonjs",
   "scripts": {
     "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
     "mcp": "node src/mcp-server.js",
-    "prep": "node src/prepare-vector-store.js"
+    "prep": "node src/prepare-vector-store.js",
+    "validate": "node --check src/server.js && node --check src/mcp-server.js"
   },
   "keywords": [
     "azure",
@@ -15,16 +17,25 @@
     "rag",
     "mcp",
     "express",
-    "demo"
+    "demo",
+    "enterprise-ai",
+    "vector-search"
   ],
-  "author": "",
+  "author": "Tim Warner",
   "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
-    "@azure/openai": "1.0.0-beta.12",
-    "@modelcontextprotocol/sdk": "1.19.1",
-    "dotenv": "16.4.5",
-    "express": "4.19.2",
-    "marked": "13.0.2",
-    "zod": "3.25.76"
+    "@azure/openai": "^2.0.0",
+    "@modelcontextprotocol/sdk": "^1.22.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "marked": "^17.0.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0"
   }
 }
